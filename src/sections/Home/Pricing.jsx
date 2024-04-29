@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { PricingCard, Tabs } from "../components";
-import { PricingData, PricingTabs } from "../Content";
+import { PricingCard, Tabs } from "../../components";
+import { PricingData, PricingTabs } from "../../Content";
 
 const Pricing = () => {
   // pricing offers state

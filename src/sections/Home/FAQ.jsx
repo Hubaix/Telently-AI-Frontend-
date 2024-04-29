@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { MinusIcon, PlusIcon } from "../assets/icons";
-import { FAQData } from "../Content";
+import { MinusIcon, PlusIcon } from "../../assets/icons";
+import { FAQData } from "../../Content";
 
 const FAQ = () => {
   // state for FAQs

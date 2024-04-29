@@ -1,5 +1,5 @@
 import React from "react";
-import {FeatureBackground} from '../assets/images'
+import {FeatureBackground} from '../../assets/images'
 
 const Features = () => {
   return (

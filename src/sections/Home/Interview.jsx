@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Tabs } from "../components";
-import { InterviewTabs } from "../Content";
-import { InterviewBackground } from "../assets/images";
+import { Tabs } from "../../components";
+import { InterviewTabs } from "../../Content";
+import { InterviewBackground } from "../../assets/images";
 
 const Interview = () => {
   const [selectedTab, setSelectedTab] = useState("java");

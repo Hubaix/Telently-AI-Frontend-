@@ -1,5 +1,5 @@
 import React from "react";
-import {WorkingBackground} from "../assets/images";
+import {WorkingBackground} from "../../assets/images";
 
 const Working = () => {
   return (

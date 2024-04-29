@@ -1,6 +1,6 @@
 import React from "react";
-import { JobsBackground } from "../assets/images";
-import { CircleTick } from "../assets/icons";
+import { JobsBackground } from "../../assets/images";
+import { CircleTick } from "../../assets/icons";
 
 // list data
 const listData = [

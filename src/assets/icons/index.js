@@ -1,8 +1,9 @@
-export {default as PlusIcon} from './Plus'
-export {default as MinusIcon} from './Minus'
-export {default as TwitterIcon} from './Twitter'
-export {default as FacebookIcon} from './Facebook'
-export {default as LinkedInIcon} from './LinkedIn'
-export {default as InstagramIcon} from './Instagram'
-export {default as TickIcon} from './Tick'
-export {default as CircleTick} from './CircleTick'
+export {default as PlusIcon} from './Plus';
+export {default as MinusIcon} from './Minus';
+export {default as TwitterIcon} from './Twitter';
+export {default as FacebookIcon} from './Facebook';
+export {default as LinkedInIcon} from './LinkedIn';
+export {default as InstagramIcon} from './Instagram';
+export {default as TickIcon} from './Tick';
+export {default as CircleTick} from './CircleTick';
+export {default as Menu} from './Menu';

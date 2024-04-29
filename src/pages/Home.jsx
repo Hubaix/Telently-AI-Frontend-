@@ -1,19 +1,21 @@
 import React from "react";
-import { Hero, Features, Insights, Jobs, Interview, Working, Pricing, FAQ, Footer } from "../sections";
+import { Hero, Features, Insights, Jobs, Interview, Working, Pricing, FAQ } from "../sections";
+import { NavBar, Footer } from "../components";
 
 const Home = () => {
   return (
-    <div>
-      {/* <Hero /> */}
-      {/* <Features /> */}
+    <>
+      <NavBar/>
+      <Hero />
+      <Features />
       <Insights />
-      {/* <Jobs/> */}
+      <Jobs/>
       <Interview />
       <Working />
       <Pricing />
       <FAQ />
       <Footer />
-    </div>
+    </>
   );
 };
 
