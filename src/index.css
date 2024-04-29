@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* FAQs Sections */
+
+.open-answer-container {
+  --radix-accordion-content-height: var(--radix-collapsible-content-height);
+  --radix-accordion-content-width: var(--radix-collapsible-content-width);
+  --radix-collapsible-content-height: 96px;
+  --radix-collapsible-content-width: 760px;
+}
+
+/* FAQs Sections ends */
+
+.image-transparent {
+  color: transparent;
+}
