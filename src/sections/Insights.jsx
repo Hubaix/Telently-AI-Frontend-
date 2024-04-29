@@ -11,10 +11,10 @@ const listData = [
 
 const Insights = () => {
   return (
-    <div class="py-[70px] bg-[#fff] relative lg:min-h-[800px] flex">
-      <div class="w-full max-w-[1150px] px-8 mx-auto flex grow">
-        <div class="flex flex-col items-center justify-center gap-6 text-center lg:flex-row-reverse lg:justify-end lg:ml-auto lg:text-left md:gap-10">
-          <div class="flex flex-col lg:max-w-[400px] w-full gap-6 lg:ml-auto relative z-[1]">
+    <div class="py-[70px] bg-[#fff] relative lg:min-h-[800px] flex ">
+      <div class="w-full max-w-[1150px] px-8 mx-auto flex grow ">
+        <div class="flex flex-col items-center justify-center gap-6 text-center lg:flex-row-reverse lg:justify-end lg:ml-auto lg:text-left md:gap-10 ">
+          <div class="flex flex-col lg:max-w-[400px] w-full gap-6 lg:ml-auto relative z-[1] ">
             <h4 class="font-onest font-bold text-[#111827] text-2xl md:text-[32px] leading-[100%] tracking-[-0.8px] m-0">
               Detailed Candidate Scoring
             </h4>
@@ -34,7 +34,7 @@ const Insights = () => {
             </div>
             <div class="flex flex-wrap items-center justify-center gap-4 lg:justify-start"></div>
           </div>
-          <div class="flex items-center justify-center overflow-hidden mt-[-38%] sm:mt-[-44%] ml-[30%] sm:ml-0 sm:mr-[-30%] lg:mt-0 lg:mr-0 w-[150%] lg:w-[auto] lg:absolute left-0 lg:top-[-80px] xl:top-[-31%] lg:left-[-5%] xl:left-[-66px] pointer-events-none lg:max-w-[75%] xl:max-w-full">
+          <div class="flex items-center justify-center overflow-hidden mt-[-30%] sm:mt-[-30%] ml-[25%] sm:ml-0 sm:mr-[-20%] lg:mt-0 lg:mr-0 w-[85%] sm:w-[80%] lg:w-[auto] lg:absolute left-0 lg:top-[-80px] xl:top-[-31%] lg:left-[-5%] xl:left-[-66px] pointer-events-none lg:max-w-[75%] xl:max-w-full">
             <img
               alt="About Image"
               loading="lazy"

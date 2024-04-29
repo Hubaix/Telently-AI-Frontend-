@@ -4,3 +4,4 @@ export {default as InterviewBackground} from './interview.webp';
 export {default as JobsBackground} from './jobs.webp';
 export {default as InterviewBackground1} from './interview1.webp';
 export {default as InsightsBackground} from './insights.webp';
+export {default as FeatureBackground} from './feature.webp'
