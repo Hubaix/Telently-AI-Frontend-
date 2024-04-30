@@ -36,21 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.hover\:bg-gradient-btn-2 {
-  background-image: linear-gradient(90deg, #111827, rgba(17, 24, 39, .9) 16.06%, rgba(17, 24, 39, .8) 98.85%, #111827);
-}
-
-.hover\:bg-gradient-btn-2:hover {
-  background-image: linear-gradient(90deg, #1b2334, rgba(25, 40, 71, 0.9) 16.06%, rgba(26, 32, 45, 0.8) 98.85%, #213153);
-}
-
-.terms__modal-scrollbar::-webkit-scrollbar-thumb {
-  border-radius: 16px;
-  background: #7b61ff;
-}

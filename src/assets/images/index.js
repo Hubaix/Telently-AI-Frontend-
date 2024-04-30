@@ -4,7 +4,8 @@ export {default as InterviewBackground} from './interview.webp';
 export {default as JobsBackground} from './jobs.webp';
 export {default as InterviewBackground1} from './interview1.webp';
 export {default as InsightsBackground} from './insights.webp';
-export {default as FeatureBackground} from './feature.webp'
-export {default as HeroBackground} from './Hero.webp'
-export {default as Hero1Background} from './Hero1.webp'
-export {default as Hero2Background} from './hero2.webp'
+export {default as FeatureBackground} from './feature.webp';
+export {default as HeroBackground} from './Hero.webp';
+export {default as Hero1Background} from './Hero1.webp';
+export {default as Hero2Background} from './hero2.webp';
+export {default as LoginBackground} from './login.png';

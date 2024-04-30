@@ -30,3 +30,45 @@ code {
 .image-transparent {
   color: transparent;
 }
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:bg-gradient-btn-2 {
+  background-image: linear-gradient(90deg, #111827, rgba(17, 24, 39, .9) 16.06%, rgba(17, 24, 39, .8) 98.85%, #111827);
+}
+
+.hover\:bg-gradient-btn-2:hover {
+  background-image: linear-gradient(90deg, #1b2334, rgba(25, 40, 71, 0.9) 16.06%, rgba(26, 32, 45, 0.8) 98.85%, #213153);
+}
+
+.terms__modal-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 16px;
+  background: #7b61ff;
+}
+
+.bg-gradient-0068EC-00BBF9-21-73 {
+  background-image: var(--Gradient-5, linear-gradient(142deg, #0068ec 21.8%, #00bbf9 73.22%));
+}
+
+.hover\:bg-gradient-0068EC-00BBF9-21-76:hover {
+  background-image: var(--Gradient-5, linear-gradient(162deg, #0068ec 21.8%, #00bbf9 76.22%));
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .15s;
+}
+
+@media (min-width: 992px) {
+  .laptopSm\:flex {
+      display: flex;
+  }
+}
+
+.bg-signup {
+  background-image: url(./assets/images/login.png);
+}

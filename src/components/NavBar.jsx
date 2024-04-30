@@ -47,7 +47,7 @@ const NavBar = () => {
               Book a Demo
             </button>
             <Link
-              to={"/login"}
+              to={"/auth/login"}
               className="flex flex-shrink-0 items-center justify-center text-sm font-avenir font-normal text-white px-2 py-2 min-w-[100px] min-h-[36px] border border-solid border-[#E5E7EB] rounded-[12px] transition-all bg-transparent hover:text-white focus:text-white hover:opacity-80 focus:opacity-80"
             >
               Sign In

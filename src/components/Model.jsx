@@ -7,6 +7,7 @@ const Model = ({ isOpen, onClose }) => {
         <div
           id="backdrop"
           className="modal-container fixed top-0 bottom-0 left-0 right-0 w-full h-full z-50 bg-[#000000cc] flex justify-center items-start sm:items-center backdrop-blur-md p-6 sm:p-8"
+          onClick={onClose}
         >
           <div className="modal-dialog !max-w-[616px] !w-full bg-white !border-0 rounded-[10px] !shadow-3xl">
             <div className="modal-content max-h-[95vh] overflow-y-auto flex flex-col">
