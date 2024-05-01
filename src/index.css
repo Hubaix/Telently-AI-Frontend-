@@ -63,12 +63,83 @@ code {
   transition-duration: .15s;
 }
 
+.bg-signup {
+  background-image: url(./assets/images/login.png);
+}
+
 @media (min-width: 992px) {
   .laptopSm\:flex {
       display: flex;
   }
 }
 
-.bg-signup {
-  background-image: url(./assets/images/login.png);
+@media (min-width: 992px) {
+  .laptopSm\:grid-rows-1 {
+      grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 992px) {
+  .laptopSm\:min-h-full {
+      min-height: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .laptopSm\:h-screen {
+      height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .register-grid {
+      grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .laptopSm\:max-w-\[600px\] {
+      max-width: 600px;
+  }
+}
+@media (min-width: 992px) {
+  .laptopSm\:min-h-screen {
+      min-height: 100vh;
+  }
+}
+
+@media (min-width: 640px) {
+  .sm\:pt-16 {
+      padding-top: 4rem;
+  }
+}
+@media (min-width: 640px) {
+  .sm\:pr-16 {
+      padding-right: 4rem;
+  }
+}
+@media (min-width: 640px) {
+  .sm\:pl-10 {
+      padding-left: 2.5rem;
+  }
+}
+@media (min-width: 640px) {
+  .sm\:pb-10 {
+      padding-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .laptopSm\:flex {
+      display: flex;
+  }
+}
+.mock_bg_banner {
+  background: url(./assets/images/mock-interview.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+.\!p-9 {
+  padding: 2.25rem !important;
 }

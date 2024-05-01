@@ -9,3 +9,4 @@ export {default as HeroBackground} from './Hero.webp';
 export {default as Hero1Background} from './Hero1.webp';
 export {default as Hero2Background} from './hero2.webp';
 export {default as LoginBackground} from './login.png';
+export {default as MockBackground} from './mock-interview.png';

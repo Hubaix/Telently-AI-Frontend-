@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { HeroBackground, Hero1Background, Hero2Background } from "../../assets/images";
 
 const Hero = () => {
@@ -21,12 +22,11 @@ const Hero = () => {
             >
               Book a Demo
             </button>
-            <button
-              id="mock-start-practicing"
+            <Link to={'/mock-interview'}
               class="flex items-center justify-center text-base leading-[100%] text-[#E6F7FC] px-10 py-5 min-w-[184px] min-h-[58px] border border-solid border-[#E6F7FC] rounded-[100px] transition-all bg-transparent hover:text-[#445E7C] focus:text-[#445E7C] hover:border-[#E6F7FC] focus:border-[#E6F7FC] hover:bg-[#E6F7FC] focus:bg-[#E6F7FC]"
             >
               Try AI Interview
-            </button>
+            </Link>
           </div>
         </div>
         <div class="flex flex-col md:flex-row items-center gap-10 md:gap-6 w-full max-w-[1018px] mx-auto bg-white shadow-demo-card rounded-[10px] py-10 px-6 md:pr-0 laptopSm:py-[37px] pl-[24px] md:pl-[40px] laptopSm:pl-[70px] relative z-[1] mb-[-200px] overflow-hidden">
