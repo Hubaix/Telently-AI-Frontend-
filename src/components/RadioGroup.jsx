@@ -1,6 +1,6 @@
 import React from "react";
 import { RadioButton } from "./";
-const RadioGroup = ({selected, handler}) => {
+const RadioGroup = ({selected, handler, data}) => {
   return (
     <div
       role="radiogroup"
@@ -10,7 +10,16 @@ const RadioGroup = ({selected, handler}) => {
       aria-label="View density"
       tabindex="0"
     >
-      <RadioButton
+        {data && data.map((item, index) => (
+            <RadioButton
+            key={index}
+            label={item.title}
+            value={item.title.toLowerCase()}
+            selected={selected}
+            handler={handler}
+          />      
+        ))}
+      {/* <RadioButton
         label="Full Stack Developer"
         value={"full-stack-developer"}
         selected={selected}
@@ -33,7 +42,7 @@ const RadioGroup = ({selected, handler}) => {
         value={"lead-product-designer"}
         selected={selected}
         handler={handler}
-      />
+      /> */}
     </div>
   );
 };

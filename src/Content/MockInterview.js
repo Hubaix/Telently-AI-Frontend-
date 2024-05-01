@@ -1,22 +1,18 @@
 const MockInterviewData = [
     {
-        title: "",
-        value: "",
+        title: "Full Stack Developer",
         jobDescription: "",
     },
     {
-        title: "",
-        value: "",
+        title: "Front End Developer",
         jobDescription: "",
     },
     {
-        title: "",
-        value: "",
+        title: "Business Development Manager",
         jobDescription: "",
     },
     {
-        title: "",
-        value: "",
+        title: "Lead Product Designer",
         jobDescription: "",
     },
 ];

@@ -1,24 +1,21 @@
 import React, { useState } from "react";
 import '../../style/selectedInterview.css';
-import { useParams, Link } from "react-router-dom";
 import { BackArrowIcon } from "../../assets/icons";
 import { RadioGroup } from "../../components";
+import { MockInterviewData } from "../../Content";
 
-const SelectedInterview = () => {
-  const { id } = useParams();
-  const [selected, setSelected] = useState(id);
-
-  const handleRadioButtonChange = (value) => {
-    setSelected(value);
-  };
+const SelectedInterview = ({selected, handler}) => {
 
   return (
     <div class="relative laptopSm:max-w-[600px] mx-auto w-full  laptopSm:min-h-screen sm:pb-10 flex flex-col">
       <div>
-        <Link to="/mock-interview" class="flex items-baseline gap-2 font-sofia cursor-pointer w-fit text-[#312A50] text-base">
+        <button 
+          class="flex items-baseline gap-2 font-sofia cursor-pointer w-fit text-[#312A50] text-base"
+          onClick={() => handler(null)}
+        >
           <BackArrowIcon />
           <p>Back</p>
-        </Link>
+        </button>
         <div class="flex flex-col justify-start items-start gap-1">
           <p class="flex-grow-0 flex-shrink-0 text-2xl font-bold text-[#312a50] text-left pb-8 pt-2">
             Practice giving live, conversational interviews for free.
@@ -33,7 +30,7 @@ const SelectedInterview = () => {
         <form data-hs-cf-bound="true" data-gtm-form-interact-id="0">
           <div>
             <div class="flex flex-col flex-grow mb-6">
-              <RadioGroup selected={selected} handler={handleRadioButtonChange}/>
+              <RadioGroup selected={selected} handler={handler} data={MockInterviewData}/>
             </div>
             <div class=" w-full mx-auto pl-2 pr-3 pb-4">
               <div class="mb-4">
