@@ -4,6 +4,8 @@ export {default as Tabs} from './Tabs';
 export {default as Footer} from './Footer';
 export {default as Model} from './Model';
 export {default as InputField} from './InputField';
+export {default as RadioButton} from './RadioButton';
+export {default as RadioGroup} from './RadioGroup';
 
 // Buttons
 export {default as ButtonVariant1} from './Buttons/ButtonVariant1';

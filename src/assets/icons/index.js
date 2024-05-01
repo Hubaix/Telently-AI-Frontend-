@@ -7,3 +7,4 @@ export {default as InstagramIcon} from './Instagram';
 export {default as TickIcon} from './Tick';
 export {default as CircleTick} from './CircleTick';
 export {default as Menu} from './Menu';
+export {default as BackArrowIcon} from './BackArrow';

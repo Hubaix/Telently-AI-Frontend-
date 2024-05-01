@@ -1,0 +1,110 @@
+.radio-btn-design {
+  transform: translateX(-100%);
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  margin: 0px;
+  width: 163.359px;
+  height: 21px;
+}
+
+.RichTextEditor__root___2QXK- {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-family: Georgia, serif;
+  font-size: 14px;
+}
+
+.\!bg-\[\#656565\]\/10 {
+  background-color: hsla(0, 0%, 40%, 0.1) !important;
+}
+
+.RichTextEditor__editor___1QqIU {
+  cursor: text;
+  font-size: 16px;
+}
+.text-\[\#4D526D\] {
+  --tw-text-opacity: 1;
+  color: rgb(77 82 109 / var(--tw-text-opacity));
+}
+.text-\[\#312A50\] {
+  --tw-text-opacity: 1;
+  color: rgb(49 42 80 / var(--tw-text-opacity));
+}
+.\!text-\[\#6B6581\]\/70 {
+  color: rgba(107, 101, 129, 0.7) !important;
+}
+.\!text-xs {
+  font-size: 0.75rem !important;
+  line-height: 1rem !important;
+}
+.font-sofia {
+  font-family: var(--font-sofia);
+}
+.\!p-0 {
+  padding: 0 !important;
+}
+
+.DraftEditor-root {
+  position: relative;
+}
+
+.DraftEditor-root,
+.DraftEditor-editorContainer,
+.public-DraftEditor-content {
+  height: inherit;
+  text-align: initial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.DraftEditor-editorContainer {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.Text-Editor {
+  outline: none;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.RichTextEditor__editor___1QqIU .public-DraftEditor-content {
+  overflow: auto;
+}
+
+.RichTextEditor__editor___1QqIU .public-DraftEditor-content,
+.RichTextEditor__editor___1QqIU .public-DraftEditorPlaceholder-root {
+  margin: 0;
+  padding: 9px;
+}
+
+.public-DraftEditor-content {
+  outline: none;
+  white-space: pre-wrap;
+  outline: none;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.selector-design {
+  position: absolute;
+  border: 0px;
+  width: 1px;
+  height: 1px;
+  padding: 0px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0px, 0px, 0px, 0px);
+  white-space: nowrap;
+  overflow-wrap: normal;
+}
