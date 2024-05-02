@@ -8,3 +8,4 @@ export {default as TickIcon} from './Tick';
 export {default as CircleTick} from './CircleTick';
 export {default as Menu} from './Menu';
 export {default as BackArrowIcon} from './BackArrow';
+export {default as DescriptionIcon} from './Description';

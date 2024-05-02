@@ -6,6 +6,7 @@ export {default as Model} from './Model';
 export {default as InputField} from './InputField';
 export {default as RadioButton} from './RadioButton';
 export {default as RadioGroup} from './RadioGroup';
+export {default as CheckBox} from './CheckBox';
 
 // Buttons
 export {default as ButtonVariant1} from './Buttons/ButtonVariant1';
@@ -14,3 +15,5 @@ export {default as ButtonVariant3} from './Buttons/ButtonVariant3';
 export {default as ButtonVariant4} from './Buttons/ButtonVariant4';
 export {default as ButtonVariant5} from './Buttons/ButtonVariant5';
 export {default as ButtonVariant6} from './Buttons/ButtonVariant6';
+export {default as ButtonVariant7} from './Buttons/Buttonvariant7';
+export {default as ButtonVariant8} from './Buttons/ButtonVariant8';

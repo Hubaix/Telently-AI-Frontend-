@@ -16,6 +16,7 @@ const MockInterview = () => {
       <div class="flex flex-col flex-grow overflow-x-hidden overflow-y-auto no-scrollbar">
         <div class="relative laptopSm:max-w-[600px] mx-auto w-full px-8 sm:pr-16 sm:pl-10 laptopSm:min-h-screen sm:pt-16 sm:pb-10 py-8 flex flex-col">
             {!selected && <MainMenu handler={handleRadioButtonChange}/>}
+            
             {selected && <SelectedInterview selected={selected} handler={handleRadioButtonChange}/>}
         </div>
       </div>
