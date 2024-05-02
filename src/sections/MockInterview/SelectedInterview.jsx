@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "../../style/selectedInterview.css";
-import { BackArrowIcon } from "../../assets/icons";
-import {
-  RadioGroup,
-  CheckBox,
-  ButtonVariant7,
-  ButtonVariant8,
-} from "../../components";
+import { useNavigate } from "react-router-dom";
 import { MockInterviewData } from "../../Content";
+import { BackArrowIcon } from "../../assets/icons";
+import { RadioGroup, CheckBox, ButtonVariant7, ButtonVariant8 } from "../../components";
 
-const SelectedInterview = ({ selected, handler }) => {
+const SelectedInterview = ({ selected, radioHandler, customHandler }) => {
   const [JobData, setJobData] = useState(null);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (selected) {
@@ -28,7 +26,7 @@ const SelectedInterview = ({ selected, handler }) => {
       <div>
         <button
           class="flex items-baseline gap-2 font-sofia cursor-pointer w-fit text-[#312A50] text-base"
-          onClick={() => handler(null)}
+          onClick={() => radioHandler(null)}
         >
           <BackArrowIcon />
           <p>Back</p>
@@ -44,12 +42,11 @@ const SelectedInterview = ({ selected, handler }) => {
         </div>
       </div>
       <div>
-        <form data-hs-cf-bound="true" data-gtm-form-interact-id="0">
           <div>
             <div class="flex flex-col flex-grow mb-6">
               <RadioGroup
                 selected={selected}
-                handler={handler}
+                handler={radioHandler}
                 data={MockInterviewData}
               />
             </div>
@@ -157,13 +154,14 @@ const SelectedInterview = ({ selected, handler }) => {
               />
             </div>
             <div class="flex flex-col justify-start items-center pb-8 gap-4 sm:flex-row">
-              <ButtonVariant7 handler={() => {}}>Submit</ButtonVariant7>
-              <ButtonVariant8 handler={() => {}}>
+              <ButtonVariant7 handler={() => navigate('interview-info')}>
+                Submit
+              </ButtonVariant7>
+              <ButtonVariant8 handler={customHandler}>
                 Create my custom interview
               </ButtonVariant8>
             </div>
           </div>
-        </form>
       </div>
     </div>
   );

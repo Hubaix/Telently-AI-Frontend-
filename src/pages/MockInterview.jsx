@@ -1,11 +1,16 @@
 import React, { useState } from "react";
-import { MainMenu, SelectedInterview } from "../sections";
+import { MainMenu, SelectedInterview, CustomInterview } from "../sections";
 
 const MockInterview = () => {
+  const [isCustom, setIsCustom] = useState(false);
   const [selected, setSelected] = useState(null);
 
   const handleRadioButtonChange = (value) => {
     setSelected(value);
+  };
+
+  const handleCustomInterview = (value) => {
+    setIsCustom(value);
   };
 
   return (
@@ -15,9 +20,30 @@ const MockInterview = () => {
       </div>
       <div class="flex flex-col flex-grow overflow-x-hidden overflow-y-auto no-scrollbar">
         <div class="relative laptopSm:max-w-[600px] mx-auto w-full px-8 sm:pr-16 sm:pl-10 laptopSm:min-h-screen sm:pt-16 sm:pb-10 py-8 flex flex-col">
-            {!selected && <MainMenu handler={handleRadioButtonChange}/>}
-            
-            {selected && <SelectedInterview selected={selected} handler={handleRadioButtonChange}/>}
+          {/* Menu (page 1) */}
+          {!selected && !isCustom && (
+            <MainMenu
+              radioHandler={handleRadioButtonChange}
+              btnHandler={handleCustomInterview}
+            />
+          )}
+
+          {/* Custom Data for interview */}
+          {isCustom && (
+            <CustomInterview
+              radioHandler={handleRadioButtonChange}
+              customHandler={handleCustomInterview}
+            />
+          )}
+
+          {/* Selected Interview data (page 2) */}
+          {!isCustom && selected && (
+            <SelectedInterview
+              selected={selected}
+              radioHandler={handleRadioButtonChange}
+              customHandler={() => handleCustomInterview(true)}
+            />
+          )}
         </div>
       </div>
     </div>

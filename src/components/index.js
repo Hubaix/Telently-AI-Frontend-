@@ -3,7 +3,7 @@ export {default as PricingCard} from './PricingCard';
 export {default as Tabs} from './Tabs';
 export {default as Footer} from './Footer';
 export {default as Model} from './Model';
-export {default as InputField} from './InputField';
+
 export {default as RadioButton} from './RadioButton';
 export {default as RadioGroup} from './RadioGroup';
 export {default as CheckBox} from './CheckBox';
@@ -17,3 +17,7 @@ export {default as ButtonVariant5} from './Buttons/ButtonVariant5';
 export {default as ButtonVariant6} from './Buttons/ButtonVariant6';
 export {default as ButtonVariant7} from './Buttons/Buttonvariant7';
 export {default as ButtonVariant8} from './Buttons/ButtonVariant8';
+
+// Input Fields
+export {default as InputField} from './InputFields/InputField';
+export {default as InputField1} from './InputFields/InputField1';

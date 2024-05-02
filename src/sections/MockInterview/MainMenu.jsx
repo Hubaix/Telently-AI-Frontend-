@@ -1,18 +1,8 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { ButtonVariant5, ButtonVariant6 } from "../../components";
 
-const MainMenu = ({handler}) => {
-  const navigate = useNavigate();
-
-  const handleCreateCustomInterview = () => {
-    navigate("/mock-interview/custom");
-  };
-
-  const handleSelectInterview = (value) => {
-    // navigate(`/mock-interview/${value}`);
-  }
-
+const MainMenu = ({radioHandler, btnHandler}) => {
+  
   return (
     <div>
       <div>
@@ -28,12 +18,12 @@ const MainMenu = ({handler}) => {
       </div>
       <div class="flex flex-col">
         <div class="grid grid-cols-2 justify-between gap-x-4 gap-y-8 mt-8 mb-4 pb-4">
-          <ButtonVariant5 handler={() => handler("full stack developer")}>Full Stack Developer</ButtonVariant5>
-          <ButtonVariant5 handler={() => handler("front end developer")}>Front End Developer</ButtonVariant5>
-          <ButtonVariant5 handler={() => handler("business development manager")}>Business Development Manager</ButtonVariant5>
-          <ButtonVariant5 handler={() => handler("lead product designer")}>Lead Product Designer</ButtonVariant5>
+          <ButtonVariant5 handler={() => radioHandler("full stack developer")}>Full Stack Developer</ButtonVariant5>
+          <ButtonVariant5 handler={() => radioHandler("front end developer")}>Front End Developer</ButtonVariant5>
+          <ButtonVariant5 handler={() => radioHandler("business development manager")}>Business Development Manager</ButtonVariant5>
+          <ButtonVariant5 handler={() => radioHandler("lead product designer")}>Lead Product Designer</ButtonVariant5>
         </div>
-        <ButtonVariant6 handler={handleCreateCustomInterview}>I want to create my custom interview</ButtonVariant6>
+        <ButtonVariant6 handler={btnHandler}>I want to create my custom interview</ButtonVariant6>
       </div>
     </div>
   );
