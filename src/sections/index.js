@@ -7,6 +7,7 @@ export {default as Interview} from './Home/Interview';
 export {default as Working} from './Home/Working';
 export {default as Pricing} from './Home/Pricing';
 export {default as FAQ} from './Home/FAQ';
+export {default as ProcessingModal} from './Modal/Processing';
 
 // Login page sections
 export {default as LoginForm} from './Auth/LoginForm';

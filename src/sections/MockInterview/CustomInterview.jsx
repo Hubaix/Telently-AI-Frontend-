@@ -54,6 +54,7 @@ const CustomInterview = ({ radioHandler, customHandler }) => {
           <div class=" w-full mx-auto pl-2 pr-3 pb-4">
             <div class="mb-4">
               <InputField1
+                label={"Job title"}
                 placeholder={"e.g. “Senior Software Developer”"}
                 name={"title"}
                 value={JobData.title}

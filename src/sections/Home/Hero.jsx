@@ -16,12 +16,11 @@ const Hero = () => {
             Say goodbye to manual screening and hello to smarter recruiting.
           </p>
           <div class="flex flex-col mobileXl:flex-row justify-center gap-2">
-            <button
-              id="book-demo"
+            <a href="https://calendly.com/mtm75474/30-minutes-talently" target="_blank" rel="noreferrer noopener" 
               class="flex items-center justify-center text-base leading-[100%] text-[#F9FAFB] px-10 py-5 min-w-[184px] min-h-[58px] border-0 rounded-[100px] transition-all bg-gradient-skyblue hover:text-white focus:text-white hover:bg-gradient-skyblue-2 focus:bg-gradient-skyblue-2"
             >
               Book a Demo
-            </button>
+            </a>
             <Link to={'/mock-interview'}
               class="flex items-center justify-center text-base leading-[100%] text-[#E6F7FC] px-10 py-5 min-w-[184px] min-h-[58px] border border-solid border-[#E6F7FC] rounded-[100px] transition-all bg-transparent hover:text-[#445E7C] focus:text-[#445E7C] hover:border-[#E6F7FC] focus:border-[#E6F7FC] hover:bg-[#E6F7FC] focus:bg-[#E6F7FC]"
             >

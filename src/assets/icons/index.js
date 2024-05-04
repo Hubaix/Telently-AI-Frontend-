@@ -9,3 +9,7 @@ export {default as CircleTick} from './CircleTick';
 export {default as Menu} from './Menu';
 export {default as BackArrowIcon} from './BackArrow';
 export {default as DescriptionIcon} from './Description';
+export {default as ComputerIcon} from './Computer';
+export {default as OpenMicIcon} from './OpenMic';
+export {default as OpenVideoIcon} from './OpenVideo';
+export {default as ProcessingIcon} from './ProcessingIcon';

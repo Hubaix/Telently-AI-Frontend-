@@ -40,12 +40,11 @@ const NavBar = () => {
             </div>
           </div>
           <div className="items-center justify-end hidden gap-5 lg:flex">
-            <button
-              id="book-demo"
-              className="font-avenir font-normal text-white hover:opacity-80 no-underline hover:no-underline focus:no-underline text-sm transition-all"
+            <a className="font-avenir font-normal text-white hover:opacity-80 no-underline hover:no-underline focus:no-underline text-sm transition-all"
+              href="https://calendly.com/mtm75474/30-minutes-talently" target="_blank" rel="noreferrer noopener"
             >
               Book a Demo
-            </button>
+            </a>
             <Link
               to={"/auth/login"}
               className="flex flex-shrink-0 items-center justify-center text-sm font-avenir font-normal text-white px-2 py-2 min-w-[100px] min-h-[36px] border border-solid border-[#E5E7EB] rounded-[12px] transition-all bg-transparent hover:text-white focus:text-white hover:opacity-80 focus:opacity-80"
@@ -64,12 +63,11 @@ const NavBar = () => {
               <div className="cursor-pointer font-avenir font-normal text-[#445E7C] hover:text-[#7A3FF3] no-underline hover:no-underline focus:no-underline text-sm transition-all">
                 Features
               </div>
-              <button
-                id="book-demo"
+              <a href="https://calendly.com/mtm75474/30-minutes-talently" target="_blank" rel="noreferrer noopener"
                 className="font-avenir font-normal text-[#445E7C] hover:text-[#7A3FF3] no-underline hover:no-underline focus:no-underline text-sm transition-all"
               >
                 Book a Demo
-              </button>
+              </a>
               <Link
                 to={"/login"}
                 className="flex flex-shrink-0 items-center justify-center text-sm font-avenir font-normal text-[#445E7C] px-2 py-2 min-w-[100px] min-h-[36px] border border-solid border-[#E5E7EB] rounded-[12px] transition-all bg-transparent hover:text-white focus:text-white hover:bg-[#445E7C] focus:bg-[#445E7C]"
