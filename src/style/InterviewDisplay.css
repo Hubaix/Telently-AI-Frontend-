@@ -1,0 +1,28 @@
+.chat1 {
+  opacity: 0;
+  width: 43px;
+  height: 43px;
+  transform: scale(0) translateZ(0px);
+}
+
+.chat-img {
+  color: transparent;
+}
+
+.chat-video {
+  transform: scaleX(-1);
+}
+
+.chat2 {
+  position: relative;
+  --radix-scroll-area-corner-width: 0px;
+  --radix-scroll-area-corner-height: 0px;
+}
+
+.chat3 {
+    overflow: hidden scroll;
+}
+
+.chat4 {
+    min-width: 100%; display: table;
+}

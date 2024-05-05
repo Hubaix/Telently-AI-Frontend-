@@ -13,3 +13,4 @@ export {default as ComputerIcon} from './Computer';
 export {default as OpenMicIcon} from './OpenMic';
 export {default as OpenVideoIcon} from './OpenVideo';
 export {default as ProcessingIcon} from './ProcessingIcon';
+export {default as TimerClockIcon} from './TimmerClock';

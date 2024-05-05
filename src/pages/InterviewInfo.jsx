@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../style/interviewInfo.css";
+import { useNavigate } from "react-router-dom";
 import { ComputerIcon, OpenMicIcon, OpenVideoIcon } from "../assets/icons";
 import { ButtonVariant7, InputField1 } from "../components";
 import { ProcessingModal } from "../sections";
@@ -21,6 +22,8 @@ const InterviewInfo = () => {
     name: false,
     email: false,
   });
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (isTouch.name) {
@@ -71,6 +74,7 @@ const InterviewInfo = () => {
     // off the processing modal after 5 seconds
     setTimeout(() => {
       setIsProcessing(false);
+      navigate("/mock-interview/interview")
     }, 5000);
 
   };

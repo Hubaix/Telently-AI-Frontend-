@@ -17,6 +17,7 @@ export {default as ButtonVariant5} from './Buttons/ButtonVariant5';
 export {default as ButtonVariant6} from './Buttons/ButtonVariant6';
 export {default as ButtonVariant7} from './Buttons/Buttonvariant7';
 export {default as ButtonVariant8} from './Buttons/ButtonVariant8';
+export {default as ButtonVariant9} from './Buttons/ButtonVariant9';
 
 // Input Fields
 export {default as InputField} from './InputFields/InputField';
