@@ -20,9 +20,28 @@
 }
 
 .chat3 {
-    overflow: hidden scroll;
+  overflow: hidden scroll;
 }
 
 .chat4 {
-    min-width: 100%; display: table;
+  min-width: 100%;
+  display: table;
+}
+
+.chatbot1 {
+  width: 35px;
+  height: 35px;
+}
+
+[data-radix-scroll-area-viewport] {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+[data-radix-scroll-area-viewport]::-webkit-scrollbar {
+  display: none;
+}
+
+.user-icon{
+  aspect-ratio: unset;
 }

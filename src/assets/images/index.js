@@ -11,6 +11,7 @@ export {default as Hero2Background} from './hero2.webp';
 export {default as LoginBackground} from './login.png';
 export {default as MockBackground} from './mock-interview.png';
 export {default as Celebrate} from './celebrate.webp';
+export {default as Bot} from './bot.svg';
 
 // Logos
 export {default as WhiteLogo} from './logos/white.png';

@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "../style/InterviewDisplay.css";
 import { useNavigate } from "react-router-dom";
+import Typist from 'react-typist';
 import { TimerClockIcon, StopVideoIcon } from "../assets/icons";
+import { Bot } from "../assets/images";
 import { ButtonVariant9 } from "../components";
 import { ShareScreenModal, EndInterviewModal } from "../sections";
 import { formatTime } from "../utils";
+import { InterviewQuestions } from "../Content";
 
 const InterviewDisplay = () => {
   const [isNotScreenSharing, setIsNotScreenSharing] = useState(false);
@@ -16,7 +19,9 @@ const InterviewDisplay = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (isEndInterview) { navigate("complete"); }
+    if (isEndInterview) {
+      navigate("complete");
+    }
   }, [isEndInterview]);
 
   useEffect(() => {
@@ -28,7 +33,6 @@ const InterviewDisplay = () => {
     }
     return () => clearInterval(interval);
   }, [isStartInterview]);
-
 
   return (
     <div className="w-full min-h-screen overflow-hidden flex flex-col flex-grow overflow-y-auto overflow-x-hidden justify-center items-center bg-[#131224]">
@@ -46,7 +50,9 @@ const InterviewDisplay = () => {
                           <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
                         </span>
                       </div>
-                      <p className="font-xs font-sofia text-white mt-[4px]">REC</p>
+                      <p className="font-xs font-sofia text-white mt-[4px]">
+                        REC
+                      </p>
                     </div>
                   )}
                 </div>
@@ -128,11 +134,63 @@ const InterviewDisplay = () => {
             <div data-radix-scroll-area-viewport="" className="chat3">
               <div className="chat4">
                 <div className="flex flex-col justify-start gap-8 pr-3">
-                  <p className="text-white">
-                    Click Start Interview to get started. You must share your
-                    entire screen to attempt the interview. This is to prevent
-                    plagiarism during the interview.
-                  </p>
+                
+                  {isStartInterview &&
+                    InterviewQuestions?.map((question) => (
+                      <React.Fragment key={question.id}>
+                        <div class="flex text-white ">
+                          <div class="shrink-0 mr-2 flex flex-col items-center gap-3">
+                            <div class="chatbot1 rounded-full text-white bg-slate-500 flex justify-center items-center">
+                              <img
+                                alt="Interview Bot's Avatar"
+                                loading="lazy"
+                                width="35"
+                                height="35"
+                                decoding="async"
+                                data-nimg="1"
+                                className="image-transparent"
+                                src={Bot}
+                              />
+                            </div>
+                          </div>
+                          <div class="w-11/12  break-words">
+                            <div class="text-xs">Interview Bot</div>
+                            <div class="text-sm">{question.question}</div>
+                          </div>
+                        </div>
+                        
+                        <div class="flex text-white ">
+                          <div class="shrink-0 mr-2 flex flex-col items-center gap-3">
+                            <div class="chatbot1 rounded-full text-white bg-slate-500 flex justify-center items-center">
+                              <span class="pt-[3px] text-sm">U</span>
+                            </div>
+                            <div class="flex text-white">
+                              <div class="shrink-0 mr-2 flex flex-col items-center gap-3">
+                                <canvas
+                                  width="40"
+                                  height="25"
+                                  className="user-icon"
+                                ></canvas>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="w-11/12  break-words">
+                            <div class="text-xs">Muhammad</div>
+                            
+                            <div class="text-sm"><Typist>{question.answer}</Typist></div>
+                          </div>
+                        </div>
+                        
+                      </React.Fragment>
+                    ))}
+
+                  {!isStartInterview && (
+                    <p className="text-white">
+                      Click Start Interview to get started. You must share your
+                      entire screen to attempt the interview. This is to prevent
+                      plagiarism during the interview.
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
