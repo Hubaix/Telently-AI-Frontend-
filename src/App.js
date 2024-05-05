@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { Home, Auth, Login, ForgetPassword, MockInterview, InterviewInfo, InterviewDisplay, NotFound } from "./pages";
+import { Home, Auth, Login, ForgetPassword, MockInterview, InterviewInfo, InterviewDisplay, InterviewComplete, NotFound } from "./pages";
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
       <Route path="/mock-interview" element={<MockInterview/>}/>
       <Route path="/mock-interview/interview-info" element={<InterviewInfo/>}/>
       <Route path="/mock-interview/interview" element={<InterviewDisplay/>}/>
+      <Route path="/mock-interview/interview/complete" element={<InterviewComplete/>}/>
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

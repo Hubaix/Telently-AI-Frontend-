@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "../style/InterviewDisplay.css";
 import { TimerClockIcon } from "../assets/icons";
 import { ButtonVariant9 } from "../components";
+import { ShareScreenModal, EndInterviewModal } from "../sections";
 
 const InterviewDisplay = () => {
+
+  const [isNotScreenSharing, setIsNotScreenSharing] = useState(false);
+  const [showEndInterviewModal, setShowEndInterviewModal] = useState(true);
+  const[isEndInterview, setIsEndInterview] = useState(false);
+
   return (
     <div class="w-full min-h-screen overflow-hidden flex flex-col flex-grow overflow-y-auto overflow-x-hidden justify-center items-center bg-[#131224]">
       <div class="w-[90vw] h-[90vh]">
@@ -95,6 +101,20 @@ const InterviewDisplay = () => {
             </div>
           </div>
         </div>
+
+        {/* Screen Sharing Modal */}
+        <ShareScreenModal
+          isOpen={isNotScreenSharing}
+          onClose={() => setIsNotScreenSharing(false)}
+        />
+
+        {/* End Interview Modal */}
+        <EndInterviewModal
+          isOpen={showEndInterviewModal}
+          onClose={() => setShowEndInterviewModal(false)}
+          setValues={() => setIsEndInterview(true)}
+        />
+
       </div>
     </div>
   );

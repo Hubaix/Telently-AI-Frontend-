@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
+import { BlackLogo } from "../assets/images";
 
 const Login = () => {
   return (
@@ -11,7 +12,7 @@ const Login = () => {
             <Link to={'/'}
               class="w-full flex max-h-[32px] max-w-[150px] flex-shrink-0 items-center justify-start sm:max-h-[34px] sm:max-w-[159px] no-underline hover:no-underline focus:no-underline"
             >
-              {/* <img
+              <img
                 alt=""
                 loading="lazy"
                 width="120"
@@ -19,9 +20,8 @@ const Login = () => {
                 decoding="async"
                 data-nimg="1"
                 className="image-transparent"
-                src="/images/landing/talently-logo-header-new.svg"
-              /> */}
-              Telently
+                src={BlackLogo}
+              />
             </Link>
             <Outlet />
           </div>

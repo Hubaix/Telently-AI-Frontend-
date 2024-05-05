@@ -6,3 +6,4 @@ export {default as MockInterview} from './MockInterview';
 export {default as NotFound} from './NotFound';
 export {default as InterviewInfo} from './InterviewInfo';
 export {default as InterviewDisplay} from './InterviewDisplay'
+export {default as InterviewComplete} from './InterviewComplete'

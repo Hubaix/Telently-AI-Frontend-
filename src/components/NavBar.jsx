@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu } from "../assets/icons";
+import { WhiteLogo } from "../assets/images";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ const NavBar = () => {
             to="/"
             className="w-full flex text-white max-h-[32px] max-w-[150px] flex-shrink-0 items-center justify-start sm:max-h-[34px] sm:max-w-[159px] no-underline hover:no-underline focus:no-underline"
           >
-            {/* <img
+            <img
               alt="Logo"
               loading="lazy"
               width="118"
@@ -21,9 +22,8 @@ const NavBar = () => {
               decoding="async"
               data-nimg="1"
               className="image-transparent"
-              src=""
-            /> */}
-            Telently
+              src={WhiteLogo}
+            />
           </Link>
           <button
             className="border-0 bg-transparent text-white hover:opacity-80 no-underline hover:no-underline focus:no-underline focus:bg-transparent focus:outline-none lg:hidden"
