@@ -7,7 +7,6 @@ const EndInterview = ({ isOpen, onClose, setValue }) => {
         <div
           id="backdrop"
           className="modal-container fixed top-0 bottom-0 left-0 right-0 w-full h-full z-50 bg-[#fffffcc] flex justify-center items-center backdrop-blur-md p-8"
-          onClick={onClose}
         >
           <div className="modal-dialog !max-w-[550px] !w-full bg-white !border-0 rounded-[10px] p-12 !shadow-3xl">
             <div className="mb-5">
@@ -29,7 +28,10 @@ const EndInterview = ({ isOpen, onClose, setValue }) => {
               <button
                 type="button"
                 className="flex sm:w-auto w-full min-h-[50px] pl-4 pr-4 items-center justify-center rounded-lg bg-[#E54666] p-2 text-center text-sm capitalize text-[#ffffff] hover:bg-[#B3445A] focus:bg-violet-700 disabled:bg-slate-400"
-                onClick={setValue}
+                onClick={() => {
+                  setValue();
+                  onClose();
+                }}
               >
                 Stop Interview
               </button>
