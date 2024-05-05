@@ -143,3 +143,7 @@ code {
 .\!p-9 {
   padding: 2.25rem !important;
 }
+
+.processing-bg {
+  background-image: url(./assets/images/processing-bg.png);
+}

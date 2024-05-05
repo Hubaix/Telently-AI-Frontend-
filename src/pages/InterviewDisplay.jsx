@@ -75,7 +75,7 @@ const InterviewDisplay = () => {
                 ></button>
                 <div className="bg-gradient-bot flex-1 flex justify-center items-center absolute bottom-0 right-0 z-[1] w-[34px] h-[34px] p-[7px] rounded-[3px]">
                   <div className="chat1 rounded-full bg-slate-200 w-[43px] h-[43px] bg-transparent border-2 border-gray-500 absolute ml-auto mr-auto"></div>
-                  <div className="rounded-full bg-white/[.10] flex justify-center items-center">
+                  {/* <div className="rounded-full bg-white/[.10] flex justify-center items-center">
                     <img
                       alt=""
                       loading="lazy"
@@ -86,7 +86,7 @@ const InterviewDisplay = () => {
                       className="rounded-full chat-img"
                       src="/images/bot-update.svg"
                     />
-                  </div>
+                  </div> */}
                 </div>
                 <button
                   type="button"
