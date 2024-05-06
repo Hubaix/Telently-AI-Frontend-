@@ -147,3 +147,11 @@ code {
 .processing-bg {
   background-image: url(./assets/images/processing-bg.png);
 }
+
+.\[\&_circle\]\:\!fill-\[red\] circle {
+  fill: red !important;
+}
+
+.fillOpacityOne circle {
+  fill-opacity: 1;
+}

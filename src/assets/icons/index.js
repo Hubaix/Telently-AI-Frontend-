@@ -15,3 +15,5 @@ export {default as OpenVideoIcon} from './OpenVideo';
 export {default as ProcessingIcon} from './ProcessingIcon';
 export {default as TimerClockIcon} from './TimmerClock';
 export {default as StopVideoIcon} from './StopVideo';
+export {default as CloseMicIcon} from './CloseMic';
+export {default as CloseVideIcon} from './CloseVideo';

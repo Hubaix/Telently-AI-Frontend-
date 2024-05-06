@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../style/InterviewDisplay.css";
 import { useNavigate } from "react-router-dom";
 import Typist from 'react-typist';
@@ -17,6 +17,7 @@ const InterviewDisplay = () => {
   const [timer, setTimer] = useState(0);
 
   const navigate = useNavigate();
+  const videoRef = useRef(null);
 
   useEffect(() => {
     if (isEndInterview) {
@@ -33,6 +34,27 @@ const InterviewDisplay = () => {
     }
     return () => clearInterval(interval);
   }, [isStartInterview]);
+
+  useEffect(() => {
+    let stream = null;
+    if (videoRef.current) {
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then((mediaStream) => {
+          videoRef.current.srcObject = mediaStream;
+          stream = mediaStream;
+        })
+        .catch((error) => {
+          console.error('Error accessing camera:', error);
+        });
+    }
+  
+    // Cleanup function
+    return () => {
+      if (stream) {
+        stream.getTracks().forEach(track => track.stop());
+      }
+    };
+  }, []);
 
   return (
     <div className="w-full min-h-screen overflow-hidden flex flex-col flex-grow overflow-y-auto overflow-x-hidden justify-center items-center bg-[#131224]">
@@ -75,18 +97,6 @@ const InterviewDisplay = () => {
                 ></button>
                 <div className="bg-gradient-bot flex-1 flex justify-center items-center absolute bottom-0 right-0 z-[1] w-[34px] h-[34px] p-[7px] rounded-[3px]">
                   <div className="chat1 rounded-full bg-slate-200 w-[43px] h-[43px] bg-transparent border-2 border-gray-500 absolute ml-auto mr-auto"></div>
-                  {/* <div className="rounded-full bg-white/[.10] flex justify-center items-center">
-                    <img
-                      alt=""
-                      loading="lazy"
-                      width="18"
-                      height="18"
-                      decoding="async"
-                      data-nimg="1"
-                      className="rounded-full chat-img"
-                      src="/images/bot-update.svg"
-                    />
-                  </div> */}
                 </div>
                 <button
                   type="button"
@@ -98,6 +108,7 @@ const InterviewDisplay = () => {
                 <div className="bg-[#212031] rounded flex-1 flex justify-center items-center relative overflow-hidden">
                   <div className="overflow-hidden">
                     <video
+                      ref={videoRef}
                       autoplay=""
                       playsinline=""
                       className="chat-video"

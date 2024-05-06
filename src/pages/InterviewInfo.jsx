@@ -1,29 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../style/interviewInfo.css";
 import { useNavigate } from "react-router-dom";
-import { ComputerIcon, OpenMicIcon, OpenVideoIcon } from "../assets/icons";
+import { ComputerIcon, OpenMicIcon, OpenVideoIcon, CloseMicIcon, CloseVideIcon } from "../assets/icons";
 import { ButtonVariant7, InputField1 } from "../components";
 import { ProcessingModal } from "../sections";
 
 const InterviewInfo = () => {
 
   const [isProcessing, setIsProcessing] = useState(false);
-  const [data, setData] = useState({
-    name: "",
-    email: "",
-  });
-
-  const [error, setError] = useState({
-    name: "",
-    email: "",
-  });
-
-  const [isTouch, setIsTouch] = useState({
-    name: false,
-    email: false,
-  });
-
+  const [data, setData] = useState({ name: "", email: "" });
+  const [error, setError] = useState({ name: "", email: "" });
+  const [isTouch, setIsTouch] = useState({ name: false, email: false });
+  const [isVideoOn, setIsVideoOn] = useState(true);
+  const [isMicroPhoneOn, setIsMicroPhoneOn] = useState(true);
+  
   const navigate = useNavigate();
+  const videoRef = useRef(null);
 
   useEffect(() => {
     if (isTouch.name) {
@@ -79,6 +71,28 @@ const InterviewInfo = () => {
 
   };
 
+  useEffect(() => {
+    let stream = null;
+    if (videoRef.current) {
+      navigator.mediaDevices.getUserMedia({ video: isVideoOn })
+        .then((mediaStream) => {
+          videoRef.current.srcObject = mediaStream;
+          stream = mediaStream;
+        })
+        .catch((error) => {
+          console.error('Error accessing camera:', error);
+          videoRef.current.srcObject = null
+        });
+    }
+  
+    // Cleanup function
+    return () => {
+      if (stream) {
+        stream.getTracks().forEach(track => track.stop());
+      }
+    };
+  }, [isVideoOn]);
+
   return (
     <>
       <div
@@ -90,6 +104,7 @@ const InterviewInfo = () => {
             <div>
               <div class="overflow-hidden">
                 <video
+                  ref={videoRef}
                   autoplay=""
                   playsinline=""
                   className="interview-video"
@@ -98,11 +113,11 @@ const InterviewInfo = () => {
             </div>
             <div class="absolute pb-2 mx-auto text-white bottom-2">
               <div class="flex gap-2">
-                <div class="[&amp;_svg]:h-[50px] [&amp;_svg]:w-[50px] cursor-pointer">
-                  <OpenMicIcon />
+                <div class="[&amp;_svg]:h-[50px] [&amp;_svg]:w-[50px] cursor-pointer" onClick={() => setIsMicroPhoneOn(!isMicroPhoneOn)}>
+                  {isMicroPhoneOn ? <OpenMicIcon /> : <CloseMicIcon/> }
                 </div>
-                <div class="[&amp;_svg]:h-[50px] [&amp;_svg]:w-[50px] cursor-pointer">
-                  <OpenVideoIcon />
+                <div class="[&amp;_svg]:h-[50px] [&amp;_svg]:w-[50px] cursor-pointer" onClick={() => setIsVideoOn(!isVideoOn)}>
+                  {isVideoOn ? <OpenVideoIcon /> : <CloseVideIcon/>}
                 </div>
               </div>
             </div>
