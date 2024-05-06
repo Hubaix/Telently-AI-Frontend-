@@ -3,7 +3,7 @@ import { TickIcon } from "../assets/icons";
 import { PriceBackground } from "../assets/images";
 import { ButtonVariant1, ButtonVariant2 } from "../components";
 
-const PricingCard = ({ card, SubmitHandler }) => {
+const PricingCard = ({ card }) => {
   return (
     <div
       className={`flex flex-col gap-6  w-full md:w-auto border border-solid  rounded-xl p-6 ${
@@ -75,7 +75,23 @@ const PricingCard = ({ card, SubmitHandler }) => {
           );
         })}
       </div>
-      {card.title.toLowerCase() === "pro" ? <ButtonVariant2 handler={SubmitHandler}/> : <ButtonVariant1 handler={SubmitHandler}/>}
+      {card.title.toLowerCase() === "pro" ? (
+        <a
+          href="https://calendly.com/mtm75474/30-minutes-talently"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <ButtonVariant2 />
+        </a>
+      ) : (
+        <a
+          href="https://calendly.com/mtm75474/30-minutes-talently"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <ButtonVariant1 />
+        </a>
+      )}
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { SocialMediaData } from "../Content";
 import Model from "./Model";
+import { BlackLogo } from "../assets/images";
 
 const Footer = () => {
   const [isTermsAndConditions, setIsTermsAndConditions] = useState(false);
@@ -16,7 +17,7 @@ const Footer = () => {
         <div className="flex flex-col w-full gap-4 mx-auto max-w-screen-2xl">
           <div className="flex items-center justify-between">
             <Link href="/">
-              {/* <img
+              <img
               alt="Logo"
               loading="lazy"
               width="108"
@@ -24,10 +25,8 @@ const Footer = () => {
               decoding="async"
               data-nimg="1"
               className="object-contain pointer-events-none"
-              src="/images/landing/talently-logo-header-new.svg"
-              style="color: transparent;"
-            /> */}
-              talently logo
+              src={BlackLogo}
+            />
             </Link>
             <div className="flex gap-2">
               {SocialMediaData &&
