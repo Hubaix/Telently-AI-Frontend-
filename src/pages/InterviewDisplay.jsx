@@ -15,12 +15,14 @@ const InterviewDisplay = () => {
   const [isEndInterview, setIsEndInterview] = useState(false);
   const [isStartInterview, setIsStartInterview] = useState(false);
   const [timer, setTimer] = useState(0);
+  const [stream, setStream] = useState(null);
 
   const navigate = useNavigate();
   const videoRef = useRef(null);
 
   useEffect(() => {
     if (isEndInterview) {
+      stopScreenSharing();
       navigate("complete");
     }
   }, [isEndInterview]);
@@ -55,6 +57,28 @@ const InterviewDisplay = () => {
       }
     };
   }, []);
+
+  useEffect(() => {
+    if(stream){ setIsStartInterview(true); }
+  }, [stream])
+
+
+  const startScreenSharing = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getDisplayMedia({ video: true });
+      setStream(stream);
+    } catch (error) {
+      console.error('Error accessing screen capture:', error);
+      setIsNotScreenSharing(true);
+    }
+  };
+
+  const stopScreenSharing = () => {
+    if (stream) {
+      stream.getTracks().forEach(track => track.stop());
+      setStream(null);
+    }
+  };
 
   return (
     <div className="w-full min-h-screen overflow-hidden flex flex-col flex-grow overflow-y-auto overflow-x-hidden justify-center items-center bg-[#131224]">
@@ -132,7 +156,10 @@ const InterviewDisplay = () => {
             {!isStartInterview && (
               <div className="flex items-center justify-center mt-7">
                 <div className="w-2"></div>
-                <ButtonVariant9 handler={() => setIsStartInterview(true)}>
+                <ButtonVariant9 handler={() => {
+                    // setIsStartInterview(true)
+                    startScreenSharing();
+                  }}>
                   Start Interview
                 </ButtonVariant9>
               </div>
