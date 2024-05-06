@@ -1,6 +1,11 @@
 import React from "react";
+import "../../style/Home.css";
 import { Link } from "react-router-dom";
-import { HeroBackground, Hero1Background, Hero2Background } from "../../assets/images";
+import {
+  HeroBackground,
+  Hero1Background,
+  Hero2Background,
+} from "../../assets/images";
 
 const Hero = () => {
   return (
@@ -37,12 +42,11 @@ const Hero = () => {
               Move beyond manual screening with AI recruiting solutions.
               Experience the advantages firsthand with our free demo.
             </p>
-            <button
-              id="mock-start-practicing"
+            <Link to={'/mock-interview'}
               class="flex items-center justify-center text-base leading-[100%] text-[#0068EC] px-10 py-5 min-w-[184px] min-h-[58px] border border-solid border-[#0068EC] rounded-[100px] transition-all bg-transparent hover:text-[#445E7C] focus:text-[#445E7C] hover:border-[#E6F7FC] focus:border-[#E6F7FC] hover:bg-[#E6F7FC] focus:bg-[#E6F7FC]"
             >
               Try AI Interview
-            </button>
+            </Link>
           </div>
           <div class="flex relative right-0 lg:right-[-7px] mt-[-15px] ml-[-30px] laptopSm:ml-0">
             <img

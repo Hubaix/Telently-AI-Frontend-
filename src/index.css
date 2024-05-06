@@ -155,3 +155,7 @@ code {
 .fillOpacityOne circle {
   fill-opacity: 1;
 }
+
+.selector-text{
+  pointer-events: none;
+}

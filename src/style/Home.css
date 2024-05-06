@@ -1,0 +1,55 @@
+.font-onest {
+    font-family: var(--font-onest);
+}
+
+.shadow-demo-card {
+    --tw-shadow: 0px 14px 64px 0px hsla(0,0%,55%,.25);
+    --tw-shadow-colored: 0px 14px 64px 0px var(--tw-shadow-color);
+}
+
+.shadow-box, .shadow-demo-card {
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@media (min-width: 576px) {
+    .mobileXl\:flex-row {
+        flex-direction: row;
+    }
+}
+
+.bg-gradient-skyblue {
+    background-image: var(--Gradient-5, linear-gradient(142deg, #0068ec 21.8%, #00bbf9 73.22%));
+}
+
+.bg-gradient-skyblue:hover {
+    background-image: var(--Gradient-5, linear-gradient(142deg, #00bbf9 21.8%, #0068ec 73.22%));
+}
+
+@media (min-width: 992px) {
+    .laptopSm\:pl-\[70px\] {
+        padding-left: 70px;
+    }
+}
+@media (min-width: 992px) {
+    .laptopSm\:py-\[37px\] {
+        padding-top: 37px;
+        padding-bottom: 37px;
+    }
+}
+
+.after\:border-l-transparent:after {
+    content: var(--tw-content);
+    border-left-color: transparent;
+}
+
+.after\:border-l-\[100vw\]:after {
+    content: var(--tw-content);
+    border-left-width: 100vw;
+}
+
+
+/* --------------------------------------------------------- */
+
+
+/* ------------------------------------------------------------------------ */
+

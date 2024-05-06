@@ -7,6 +7,7 @@ export {default as RadioButton} from './RadioButton';
 export {default as RadioGroup} from './RadioGroup';
 export {default as CheckBox} from './CheckBox';
 export {default as IntercomSupport} from './Intercom';
+export {default as Selector} from './Selector';
 
 // Buttons
 export {default as ButtonVariant1} from './Buttons/ButtonVariant1';

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../../style/selectedInterview.css";
 import { useNavigate } from "react-router-dom";
 import { BackArrowIcon } from "../../assets/icons";
-import { CheckBox, ButtonVariant7, InputField1 } from "../../components";
+import { CheckBox, ButtonVariant7, InputField1, Selector } from "../../components";
 
 const CustomInterview = ({ radioHandler, customHandler }) => {
   const [JobData, setJobData] = useState({
@@ -165,7 +165,7 @@ const CustomInterview = ({ radioHandler, customHandler }) => {
                                 class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"
                               >
                                 <span data-offset-key="drm3i-0-0">
-                                  <span data-text="true">Muhammad Tahir</span>
+                                  <span data-text="true"></span>
                                 </span>
                               </div>
                             </div>
@@ -177,58 +177,9 @@ const CustomInterview = ({ radioHandler, customHandler }) => {
                 </div>
               </div>
             </div>
-            <div class="text-lg text-[#312A50] leading-[134%] font-semibold mb-0">
-              <div class="w-fit text-sm" data-state="closed">
-                Interview duration (mins)
-              </div>
-            </div>
-            <div>
-              <button
-                type="button"
-                role="combobox"
-                aria-controls="radix-:r5:"
-                aria-expanded="false"
-                aria-autocomplete="none"
-                dir="ltr"
-                data-state="closed"
-                disabled=""
-                data-disabled=""
-                class="w-full rounded-[3px] border border-[#65656533] py-2 outline-none focus:outline-none focus:border placeholder-[#4D526D] flex items-center justify-between select-trigger-btn h-[56px] bg-[#656565]/10 text-[#6B6581]/70 mt-[10px] px-[26px]"
-              >
-                <span className="pointer-events-none">
-                  <span class="whitespace-nowrap overflow-hidden overflow-ellipsis block">
-                    10
-                  </span>
-                </span>
-                <div class="w-3 h-3 flex items-center justify-end flex-shrink-0 select_icon rotate-[270deg]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="8"
-                    height="14"
-                    fill="none"
-                    viewBox="0 0 8 14"
-                  >
-                    <path
-                      fill="#667085"
-                      fill-rule="evenodd"
-                      d="M7.707.293a1 1 0 0 1 0 1.414L2.414 7l5.293 5.293a1 1 0 1 1-1.414 1.414l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 0 1 1.414 0Z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </div>
-              </button>
-            </div>
-            <select
-              aria-hidden="true"
-              tabindex="-1"
-              name="interview_duration"
-              className="selector-design"
-              data-gtm-form-interact-field-id="0"
-            >
-              <option value="10">10</option>
-              <option value="20">20</option>
-            </select>
-            <div class="mb-4"></div>
+            <Selector
+              label={"Interview duration (mins)"}
+            />
             <CheckBox
               name={"allow_data_share"}
               label={"Match me with opportunities"}
